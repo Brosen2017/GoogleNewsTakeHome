@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const parser = require('body-parser');
+const key = require('../APIKEY/key.js');
 const axios = require('axios');
 const port = 3000;
 // const db = require('../database/model.js')
@@ -13,6 +14,14 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.get('/news', (req,res)=>{
     console.log('in get!')
+    axios
+    .get(`https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=${key}`)
+    .then((response)=>{
+        console.log(response.data)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
 })
 
 app.listen(port, ()=>{
