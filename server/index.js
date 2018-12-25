@@ -25,6 +25,17 @@ app.get('/news', (req,res)=>{
     })
 })
 
+app.post('/news', (req, res)=>{
+    console.log('in post!', req.body.search)
+    axios
+    .get(`https://newsapi.org/v2/everything?q=${req.body.search}&apiKey=${key}`)
+    .then((response)=>{
+        console.log(response.data)
+        res.status(200).send(response.data)
+    })
+    .catch(err=>console.log(err))
+})
+
 app.listen(port, ()=>{
     console.log(`successfully listening on ${port}`)
 });
