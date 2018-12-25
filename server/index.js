@@ -18,6 +18,7 @@ app.get('/news', (req,res)=>{
     .get(`https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=${key}`)
     .then((response)=>{
         console.log(response.data)
+        res.status(200).send(response.data);
     })
     .catch((err)=>{
         console.log(err)
