@@ -1,0 +1,29 @@
+{
+  "name": "googlenewstakehome",
+  "version": "1.0.0",
+  "description": "The purpose of this assignment is for a take home project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brosen2017/GoogleNewsTakeHome.git"
+  },
+  "author": "Brandon Rosenstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brosen2017/GoogleNewsTakeHome/issues"
+  },
+  "homepage": "https://github.com/Brosen2017/GoogleNewsTakeHome#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nodemon": "^1.18.9",
+    "sequelize": "^4.42.0",
+    "babel-env": "^2.4.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
