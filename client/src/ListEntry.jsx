@@ -11,7 +11,7 @@ let ListEntry = props => (
                 Author: {props.article.author}
            </div>
            <div>
-                Url: {props.article.url}
+                Url: <a href={props.article.url}>Click here to read the article</a>
            </div>
            <div>
                 Published: {props.article.publishedAt}
